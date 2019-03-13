@@ -8,6 +8,7 @@ target 'Lun Test Application' do
   pod 'Aspects', '~> 1.4'
   pod 'R.swift', '~> 5.0.2'
   pod 'ObjectMapper', '~> 3.4'
-  # Pods for Lun Test Application
+
+  pod 'GoogleMaps'
 
 end

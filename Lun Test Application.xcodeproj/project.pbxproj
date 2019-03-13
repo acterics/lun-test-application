@@ -182,6 +182,7 @@
 				928FE14C223868FA001EFC30 /* Frameworks */,
 				928FE14D223868FA001EFC30 /* Resources */,
 				468BB48A7F687CF932F899CB /* [CP] Embed Pods Frameworks */,
+				5918F35DA2EEEFE0CBFE1CD6 /* [CP] Copy Pods Resources */,
 			);
 			buildRules = (
 			);
@@ -263,6 +264,28 @@
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
 			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-Lun Test Application/Pods-Lun Test Application-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		5918F35DA2EEEFE0CBFE1CD6 /* [CP] Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-Lun Test Application/Pods-Lun Test Application-resources.sh",
+				"${PODS_ROOT}/GoogleMaps/Maps/Frameworks/GoogleMaps.framework/Resources/GoogleMaps.bundle",
+			);
+			name = "[CP] Copy Pods Resources";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"${TARGET_BUILD_DIR}/${UNLOCALIZED_RESOURCES_FOLDER_PATH}/GoogleMaps.bundle",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-Lun Test Application/Pods-Lun Test Application-resources.sh\"\n";
 			showEnvVarsInLog = 0;
 		};
 		928FE165223869DA001EFC30 /* ShellScript */ = {
@@ -474,6 +497,7 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = FSYC7MHAWN;
+				GOOGLE_MAPS_API_KEY = AIzaSyB5wdDcG6icA65EHbQRvHUBXYA9NsUnL24;
 				INFOPLIST_FILE = "Lun Test Application/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
@@ -493,6 +517,7 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = FSYC7MHAWN;
+				GOOGLE_MAPS_API_KEY = "";
 				INFOPLIST_FILE = "Lun Test Application/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",

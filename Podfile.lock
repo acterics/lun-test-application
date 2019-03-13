@@ -1,5 +1,10 @@
 PODS:
   - Aspects (1.4.1)
+  - GoogleMaps (3.0.3):
+    - GoogleMaps/Maps (= 3.0.3)
+  - GoogleMaps/Base (3.0.3)
+  - GoogleMaps/Maps (3.0.3):
+    - GoogleMaps/Base
   - ObjectMapper (3.4.2)
   - R.swift (5.0.2):
     - R.swift.Library (~> 5.0.0)
@@ -7,22 +12,25 @@ PODS:
 
 DEPENDENCIES:
   - Aspects (~> 1.4)
+  - GoogleMaps
   - ObjectMapper (~> 3.4)
   - R.swift (~> 5.0.2)
 
 SPEC REPOS:
   https://github.com/cocoapods/specs.git:
     - Aspects
+    - GoogleMaps
     - ObjectMapper
     - R.swift
     - R.swift.Library
 
 SPEC CHECKSUMS:
   Aspects: 7595ba96a6727a58ebcbfc954497fc5d2fdde546
+  GoogleMaps: fd5c9fa58871781b9fb94d4936f19c69fe60ce32
   ObjectMapper: 0d4402610f4e468903ae64629eec4784531e5c51
   R.swift: 81455d81467763cbd3f4d79d938d05f4ac4c0228
   R.swift.Library: 0bf390e729bc10bb2c9e4fb78bd043164a7be4ff
 
-PODFILE CHECKSUM: e624468235774aef691ae8871a7284ecb6655ecf
+PODFILE CHECKSUM: 0742f41232823702563e4d20b1d886f1b7635e14
 
 COCOAPODS: 1.6.1
