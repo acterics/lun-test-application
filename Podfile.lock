@@ -1,20 +1,28 @@
 PODS:
+  - Aspects (1.4.1)
+  - ObjectMapper (3.4.2)
   - R.swift (5.0.2):
     - R.swift.Library (~> 5.0.0)
   - R.swift.Library (5.0.0)
 
 DEPENDENCIES:
+  - Aspects (~> 1.4)
+  - ObjectMapper (~> 3.4)
   - R.swift (~> 5.0.2)
 
 SPEC REPOS:
   https://github.com/cocoapods/specs.git:
+    - Aspects
+    - ObjectMapper
     - R.swift
     - R.swift.Library
 
 SPEC CHECKSUMS:
+  Aspects: 7595ba96a6727a58ebcbfc954497fc5d2fdde546
+  ObjectMapper: 0d4402610f4e468903ae64629eec4784531e5c51
   R.swift: 81455d81467763cbd3f4d79d938d05f4ac4c0228
   R.swift.Library: 0bf390e729bc10bb2c9e4fb78bd043164a7be4ff
 
-PODFILE CHECKSUM: cf8c12ea37395dfd3ef64d0b06be2bcbf42624e1
+PODFILE CHECKSUM: e624468235774aef691ae8871a7284ecb6655ecf
 
 COCOAPODS: 1.6.1

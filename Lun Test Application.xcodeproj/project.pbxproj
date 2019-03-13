@@ -7,6 +7,10 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		9200370C22399AEB004782DC /* ProfileCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9200370B22399AEB004782DC /* ProfileCell.swift */; };
+		9200370F22399BAB004782DC /* ProfileListViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9200370E22399BAB004782DC /* ProfileListViewController.swift */; };
+		9200371322399CC3004782DC /* ProfileDetailsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9200371222399CC3004782DC /* ProfileDetailsViewController.swift */; };
+		920037162239A068004782DC /* Perform.swift in Sources */ = {isa = PBXBuildFile; fileRef = 920037152239A068004782DC /* Perform.swift */; };
 		928FE153223868FA001EFC30 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 928FE152223868FA001EFC30 /* AppDelegate.swift */; };
 		928FE158223868FA001EFC30 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 928FE156223868FA001EFC30 /* Main.storyboard */; };
 		928FE15A223868FB001EFC30 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 928FE159223868FB001EFC30 /* Assets.xcassets */; };
@@ -17,6 +21,10 @@
 
 /* Begin PBXFileReference section */
 		292911B1E5ACDC7950E39C86 /* Pods-Lun Test Application.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Lun Test Application.release.xcconfig"; path = "Target Support Files/Pods-Lun Test Application/Pods-Lun Test Application.release.xcconfig"; sourceTree = "<group>"; };
+		9200370B22399AEB004782DC /* ProfileCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileCell.swift; sourceTree = "<group>"; };
+		9200370E22399BAB004782DC /* ProfileListViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileListViewController.swift; sourceTree = "<group>"; };
+		9200371222399CC3004782DC /* ProfileDetailsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileDetailsViewController.swift; sourceTree = "<group>"; };
+		920037152239A068004782DC /* Perform.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Perform.swift; sourceTree = "<group>"; };
 		928FE14F223868FA001EFC30 /* Lun Test Application.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Lun Test Application.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		928FE152223868FA001EFC30 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		928FE157223868FA001EFC30 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
@@ -49,6 +57,41 @@
 			path = Pods;
 			sourceTree = "<group>";
 		};
+		9200370D22399B92004782DC /* UI */ = {
+			isa = PBXGroup;
+			children = (
+				9200371422399FD2004782DC /* Extensions */,
+				9200371122399CAF004782DC /* ProfileDetails */,
+				9200371022399BB5004782DC /* ProfileList */,
+			);
+			path = UI;
+			sourceTree = "<group>";
+		};
+		9200371022399BB5004782DC /* ProfileList */ = {
+			isa = PBXGroup;
+			children = (
+				9200370B22399AEB004782DC /* ProfileCell.swift */,
+				9200370E22399BAB004782DC /* ProfileListViewController.swift */,
+			);
+			path = ProfileList;
+			sourceTree = "<group>";
+		};
+		9200371122399CAF004782DC /* ProfileDetails */ = {
+			isa = PBXGroup;
+			children = (
+				9200371222399CC3004782DC /* ProfileDetailsViewController.swift */,
+			);
+			path = ProfileDetails;
+			sourceTree = "<group>";
+		};
+		9200371422399FD2004782DC /* Extensions */ = {
+			isa = PBXGroup;
+			children = (
+				920037152239A068004782DC /* Perform.swift */,
+			);
+			path = Extensions;
+			sourceTree = "<group>";
+		};
 		928FE146223868FA001EFC30 = {
 			isa = PBXGroup;
 			children = (
@@ -70,6 +113,7 @@
 		928FE151223868FA001EFC30 /* Lun Test Application */ = {
 			isa = PBXGroup;
 			children = (
+				9200370D22399B92004782DC /* UI */,
 				92CFE3A922386A6600076E18 /* R.generated.swift */,
 				928FE152223868FA001EFC30 /* AppDelegate.swift */,
 				928FE156223868FA001EFC30 /* Main.storyboard */,
@@ -167,12 +211,16 @@
 			);
 			inputPaths = (
 				"${PODS_ROOT}/Target Support Files/Pods-Lun Test Application/Pods-Lun Test Application-frameworks.sh",
+				"${BUILT_PRODUCTS_DIR}/Aspects/Aspects.framework",
+				"${BUILT_PRODUCTS_DIR}/ObjectMapper/ObjectMapper.framework",
 				"${BUILT_PRODUCTS_DIR}/R.swift.Library/Rswift.framework",
 			);
 			name = "[CP] Embed Pods Frameworks";
 			outputFileListPaths = (
 			);
 			outputPaths = (
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Aspects.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/ObjectMapper.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Rswift.framework",
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -228,7 +276,11 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				9200370C22399AEB004782DC /* ProfileCell.swift in Sources */,
+				9200371322399CC3004782DC /* ProfileDetailsViewController.swift in Sources */,
 				928FE153223868FA001EFC30 /* AppDelegate.swift in Sources */,
+				920037162239A068004782DC /* Perform.swift in Sources */,
+				9200370F22399BAB004782DC /* ProfileListViewController.swift in Sources */,
 				92CFE3AA22386A6600076E18 /* R.generated.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
