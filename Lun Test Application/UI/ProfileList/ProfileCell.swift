@@ -21,6 +21,12 @@ class ProfileCell: UITableViewCell {
         nameLabel.text = profile.name
         addressLabel.text = profile.address
         phoneLabel.text = profile.phone
+        if let image = profile.image {
+            profileImage.setImage(from: image.link,
+                                  placeholder: R.image.ic_placeholder(),
+                                  onError: { _ in self.profileImage.image = R.image.ic_error()})
+        }
+        
     }
     
 }

@@ -13,4 +13,11 @@ import UIKit
 class ProfileDetailsViewController: UIViewController {
     var profile: Profile!
     
+    override func viewDidLoad() {
+        super.viewDidLoad()
+        
+        navigationItem.title = profile.name
+        
+    }
+    
 }

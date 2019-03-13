@@ -11,12 +11,14 @@ import Foundation
 import UIKit
 
 class ProfileListDataSource: NSObject, UITableViewDataSource {
+    private static let PROFILES_COUNT = 100
+    
     var profileData: ProfileData? = nil
     
     
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         if profileData != nil {
-            return 1
+            return ProfileListDataSource.PROFILES_COUNT
         } else {
             return 0
         }
@@ -24,9 +26,9 @@ class ProfileListDataSource: NSObject, UITableViewDataSource {
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         guard let profileData = self.profileData else { fatalError("Illegal state") }
-        
         let cell = tableView.dequeueReusableCell(withIdentifier: R.reuseIdentifier.profileCell, for: indexPath)!
         cell.bindView(profile: profileData.person)
+        cell.selectionStyle = .none
         return cell
     }
     
