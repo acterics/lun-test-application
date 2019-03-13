@@ -11,6 +11,11 @@
 		9200370F22399BAB004782DC /* ProfileListViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9200370E22399BAB004782DC /* ProfileListViewController.swift */; };
 		9200371322399CC3004782DC /* ProfileDetailsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9200371222399CC3004782DC /* ProfileDetailsViewController.swift */; };
 		920037162239A068004782DC /* Perform.swift in Sources */ = {isa = PBXBuildFile; fileRef = 920037152239A068004782DC /* Perform.swift */; };
+		920037192239A689004782DC /* ProfileData.swift in Sources */ = {isa = PBXBuildFile; fileRef = 920037182239A689004782DC /* ProfileData.swift */; };
+		9200371B2239A6A0004782DC /* Profile.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9200371A2239A6A0004782DC /* Profile.swift */; };
+		9200371D2239A6AC004782DC /* Image.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9200371C2239A6AC004782DC /* Image.swift */; };
+		9200371F2239A77B004782DC /* ProfileListDataSource.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9200371E2239A77B004782DC /* ProfileListDataSource.swift */; };
+		920037212239A8FC004782DC /* ObjectMapper+Profile.swift in Sources */ = {isa = PBXBuildFile; fileRef = 920037202239A8FC004782DC /* ObjectMapper+Profile.swift */; };
 		928FE153223868FA001EFC30 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 928FE152223868FA001EFC30 /* AppDelegate.swift */; };
 		928FE158223868FA001EFC30 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 928FE156223868FA001EFC30 /* Main.storyboard */; };
 		928FE15A223868FB001EFC30 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 928FE159223868FB001EFC30 /* Assets.xcassets */; };
@@ -25,6 +30,11 @@
 		9200370E22399BAB004782DC /* ProfileListViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileListViewController.swift; sourceTree = "<group>"; };
 		9200371222399CC3004782DC /* ProfileDetailsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileDetailsViewController.swift; sourceTree = "<group>"; };
 		920037152239A068004782DC /* Perform.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Perform.swift; sourceTree = "<group>"; };
+		920037182239A689004782DC /* ProfileData.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileData.swift; sourceTree = "<group>"; };
+		9200371A2239A6A0004782DC /* Profile.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Profile.swift; sourceTree = "<group>"; };
+		9200371C2239A6AC004782DC /* Image.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Image.swift; sourceTree = "<group>"; };
+		9200371E2239A77B004782DC /* ProfileListDataSource.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileListDataSource.swift; sourceTree = "<group>"; };
+		920037202239A8FC004782DC /* ObjectMapper+Profile.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "ObjectMapper+Profile.swift"; sourceTree = "<group>"; };
 		928FE14F223868FA001EFC30 /* Lun Test Application.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Lun Test Application.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		928FE152223868FA001EFC30 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		928FE157223868FA001EFC30 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
@@ -60,7 +70,6 @@
 		9200370D22399B92004782DC /* UI */ = {
 			isa = PBXGroup;
 			children = (
-				9200371422399FD2004782DC /* Extensions */,
 				9200371122399CAF004782DC /* ProfileDetails */,
 				9200371022399BB5004782DC /* ProfileList */,
 			);
@@ -72,6 +81,7 @@
 			children = (
 				9200370B22399AEB004782DC /* ProfileCell.swift */,
 				9200370E22399BAB004782DC /* ProfileListViewController.swift */,
+				9200371E2239A77B004782DC /* ProfileListDataSource.swift */,
 			);
 			path = ProfileList;
 			sourceTree = "<group>";
@@ -88,8 +98,19 @@
 			isa = PBXGroup;
 			children = (
 				920037152239A068004782DC /* Perform.swift */,
+				920037202239A8FC004782DC /* ObjectMapper+Profile.swift */,
 			);
 			path = Extensions;
+			sourceTree = "<group>";
+		};
+		920037172239A665004782DC /* Models */ = {
+			isa = PBXGroup;
+			children = (
+				920037182239A689004782DC /* ProfileData.swift */,
+				9200371A2239A6A0004782DC /* Profile.swift */,
+				9200371C2239A6AC004782DC /* Image.swift */,
+			);
+			path = Models;
 			sourceTree = "<group>";
 		};
 		928FE146223868FA001EFC30 = {
@@ -113,6 +134,8 @@
 		928FE151223868FA001EFC30 /* Lun Test Application */ = {
 			isa = PBXGroup;
 			children = (
+				9200371422399FD2004782DC /* Extensions */,
+				920037172239A665004782DC /* Models */,
 				9200370D22399B92004782DC /* UI */,
 				92CFE3A922386A6600076E18 /* R.generated.swift */,
 				928FE152223868FA001EFC30 /* AppDelegate.swift */,
@@ -277,10 +300,15 @@
 			buildActionMask = 2147483647;
 			files = (
 				9200370C22399AEB004782DC /* ProfileCell.swift in Sources */,
+				920037212239A8FC004782DC /* ObjectMapper+Profile.swift in Sources */,
+				9200371D2239A6AC004782DC /* Image.swift in Sources */,
+				9200371B2239A6A0004782DC /* Profile.swift in Sources */,
 				9200371322399CC3004782DC /* ProfileDetailsViewController.swift in Sources */,
+				920037192239A689004782DC /* ProfileData.swift in Sources */,
 				928FE153223868FA001EFC30 /* AppDelegate.swift in Sources */,
 				920037162239A068004782DC /* Perform.swift in Sources */,
 				9200370F22399BAB004782DC /* ProfileListViewController.swift in Sources */,
+				9200371F2239A77B004782DC /* ProfileListDataSource.swift in Sources */,
 				92CFE3AA22386A6600076E18 /* R.generated.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

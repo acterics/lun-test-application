@@ -14,10 +14,13 @@ class ProfileListViewController: UIViewController {
     
     @IBOutlet weak var profileTable: UITableView!
     
+    private var profileDataSource = ProfileListDataSource()
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         
         profileTable.delegate = self
+        profileTable.dataSource = profileDataSource
         
     }
 }
@@ -26,7 +29,7 @@ extension ProfileListViewController: UITableViewDelegate {
     
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
         perform(R.segue.profileListViewController.toDetails) { detailsVC in
-            //Inject profile model
+//            detailsVC.profile = 
         }
     }
     

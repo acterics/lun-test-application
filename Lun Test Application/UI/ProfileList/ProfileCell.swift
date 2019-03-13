@@ -17,5 +17,10 @@ class ProfileCell: UITableViewCell {
     @IBOutlet weak var addressLabel: UILabel!
     @IBOutlet weak var phoneLabel: UILabel!
     
+    func bindView(profile: Profile) {
+        nameLabel.text = profile.name
+        addressLabel.text = profile.address
+        phoneLabel.text = profile.phone
+    }
     
 }

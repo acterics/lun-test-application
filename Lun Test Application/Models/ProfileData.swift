@@ -1,5 +1,5 @@
 //
-//    ProfileDetailsViewController.swift 
+//    ProfileData.swift 
 //    Lun Test Application
 //
 //    Created by Oleg Lipskiy on 3/13/19
@@ -8,9 +8,8 @@
     
 
 import Foundation
-import UIKit
 
-class ProfileDetailsViewController: UIViewController {
-    var profile: Profile!
-    
+struct ProfileData {
+    let person: Profile
+    let images: [Image]
 }
